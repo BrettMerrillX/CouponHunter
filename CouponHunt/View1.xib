@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="View1" customModule="CouponHunt" customModuleProvider="target">
             <connections>
-                <outlet property="searchDisplayController" destination="8eQ-m3-zp0" id="j07-cQ-o8E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,25 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-1s-VD9">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="smc-br-ZFx">
+                    <rect key="frame" x="0.0" y="61" width="375" height="606"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-DC-0yp">
                     <rect key="frame" x="0.0" y="17" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="8lk-PV-PR0"/>
-                    </connections>
                 </searchBar>
             </subviews>
             <color key="backgroundColor" red="0.0" green="1" blue="0.54388469827586206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="35.5" y="75.5"/>
         </view>
-        <searchDisplayController id="8eQ-m3-zp0">
-            <connections>
-                <outlet property="delegate" destination="-1" id="a89-9X-9fq"/>
-                <outlet property="searchBar" destination="lRg-1s-VD9" id="BgQ-IG-oMQ"/>
-                <outlet property="searchContentsController" destination="-1" id="nuI-5G-Itp"/>
-                <outlet property="searchResultsDataSource" destination="-1" id="nnl-Jf-25K"/>
-                <outlet property="searchResultsDelegate" destination="-1" id="D14-J6-nk1"/>
-            </connections>
-        </searchDisplayController>
     </objects>
 </document>

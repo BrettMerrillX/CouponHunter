@@ -33,13 +33,15 @@
                             <constraint firstItem="aJw-Is-kAe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="NvN-60-kix"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Lld-hs-fNt"/>
                     <connections>
+                        <outlet property="ScrollView" destination="aJw-Is-kAe" id="Rxc-QS-jyV"/>
                         <outlet property="scrollView" destination="aJw-Is-kAe" id="KyG-ma-aAi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="137"/>
+            <point key="canvasLocation" x="1014" y="204"/>
         </scene>
     </scenes>
 </document>
