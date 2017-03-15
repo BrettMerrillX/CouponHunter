@@ -32,8 +32,8 @@
                         <action selector="OpenCamera:" destination="-1" eventType="touchUpInside" id="IJ5-QX-gh9"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfz-5B-7Ti">
-                    <rect key="frame" x="0.0" y="52" width="375" height="567"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfz-5B-7Ti">
+                    <rect key="frame" x="0.0" y="41" width="375" height="588"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKb-7N-qti">
@@ -47,7 +47,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="~ Nice Pix ~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vER-Gz-E0w">
-                    <rect key="frame" x="143" y="20" width="90" height="21"/>
+                    <rect key="frame" x="143" y="19" width="90" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="0.9880136918565503" blue="0.95502226612158025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,6 +59,16 @@
                     <state key="normal" title="Lib">
                         <color key="titleColor" red="1" green="0.993475259811744" blue="0.97510999266241449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kO-q9-GqB">
+                    <rect key="frame" x="296" y="627" width="39" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Sepia">
+                        <color key="titleColor" red="0.90528098834552595" green="0.88418244958106706" blue="0.9627995466321243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="SepiaFilter:" destination="-1" eventType="touchUpInside" id="H6g-TL-21h"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.26032320231184636" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
