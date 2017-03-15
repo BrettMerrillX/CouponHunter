@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreImage
 
 class View2: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -27,10 +28,59 @@ class View2: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Alert", message: "You don't have a camera guy...", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
+    func rotateImage(image: UIImage) -> UIImage {
+        if (image.imageOrientation != UIImageOrientation.up){
+            return image
+        }
+        
+        UIGraphicsBeginImageContext(image.size)
+        
+        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
+        let copy = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return copy!
+    }
+    @IBAction func SepiaFilter(_ sender: UIButton) {
+        //let imageData = UIImagePNGRepresentation(ImageLink.image!)
+        guard let Image = ImageLink?.image, let cgimg = Image.cgImage else {
+            print("imageView doesn't have an image!")
+            return
+        }
+        let openGLContext = EAGLContext(api: .openGLES2)
+        let context = CIContext(eaglContext: openGLContext!)
+        
+        let coreImage = CIImage(cgImage: cgimg)
+        
+        let sepiaFilter = CIFilter(name: "CISepiaTone")
+        sepiaFilter?.setValue(coreImage, forKey: kCIInputImageKey)
+        sepiaFilter?.setValue(1, forKey: kCIInputIntensityKey)
+        
+        if let sepiaOutput = sepiaFilter?.value(forKey: kCIOutputImageKey) as? CIImage {
+            let exposureFilter = CIFilter(name: "CIExposureAdjust")
+            exposureFilter?.setValue(sepiaOutput, forKey: kCIInputImageKey)
+            exposureFilter?.setValue(1, forKey: kCIInputEVKey)
+            if let exposureOutput = exposureFilter?.value(forKey: kCIOutputImageKey) as? CIImage {
+                let output = context.createCGImage(exposureOutput, from: exposureOutput.extent)
+                let filteredImage = UIImage(cgImage: output!)
+                ImageLink?.image = rotateImage(image: filteredImage)
+        
+            }
+        }
+        else {
+            print("image filtering failed")
+        }
+    }
+    
     @IBAction func openPhotoLibraryButton(_ sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()

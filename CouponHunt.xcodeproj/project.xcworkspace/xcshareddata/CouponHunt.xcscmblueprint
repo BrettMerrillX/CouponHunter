@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "30599F16FF3ADF56B36E820041F37FF89F6F4DD6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "30599F16FF3ADF56B36E820041F37FF89F6F4DD6" : 9223372036854775807,
+    "591383E1BF8130DCEC7B51DE56E53EC4F41D198F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5D7BB243-A871-4272-A03E-4287D4C10851",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "30599F16FF3ADF56B36E820041F37FF89F6F4DD6" : "CouponHunt\/",
+    "591383E1BF8130DCEC7B51DE56E53EC4F41D198F" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CouponHunt",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CouponHunt.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BrettMerrillX\/CouponHunter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30599F16FF3ADF56B36E820041F37FF89F6F4DD6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BrettMerrillX\/CouponHunt",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "591383E1BF8130DCEC7B51DE56E53EC4F41D198F"
+    }
+  ]
+}

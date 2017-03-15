@@ -13,6 +13,8 @@
 		3F08D4851E64AF7400065CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F08D4831E64AF7400065CCB /* LaunchScreen.storyboard */; };
 		3F08D4901E64AF7400065CCB /* CouponHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08D48F1E64AF7400065CCB /* CouponHuntTests.swift */; };
 		3F08D49B1E64AF7400065CCB /* CouponHuntUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08D49A1E64AF7400065CCB /* CouponHuntUITests.swift */; };
+		3F3247741E790C0A003B2A9B /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3247731E790C0A003B2A9B /* OnBoardingVC.swift */; };
+		3F3247761E790E1F003B2A9B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3247751E790E1F003B2A9B /* MainVC.swift */; };
 		3F3C2C9E1E6CB1700066C1C8 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2C9C1E6CB1700066C1C8 /* View2.swift */; };
 		3F3C2C9F1E6CB1700066C1C8 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2C9D1E6CB1700066C1C8 /* View2.xib */; };
 		3FC8215B1E64B0F700E670A4 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8215A1E64B0F700E670A4 /* View1.swift */; };
@@ -52,6 +54,8 @@
 		3F08D4961E64AF7400065CCB /* CouponHuntUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponHuntUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F08D49A1E64AF7400065CCB /* CouponHuntUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponHuntUITests.swift; sourceTree = "<group>"; };
 		3F08D49C1E64AF7400065CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3247731E790C0A003B2A9B /* OnBoardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		3F3247751E790E1F003B2A9B /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3F3C2C9C1E6CB1700066C1C8 /* View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
 		3F3C2C9D1E6CB1700066C1C8 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
 		3FC8215A1E64B0F700E670A4 /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				3F08D47A1E64AF7300065CCB /* AppDelegate.swift */,
 				3FC821681E64B2C700E670A4 /* ViewController.swift */,
 				3F08D47E1E64AF7400065CCB /* Main.storyboard */,
+				3F3247751E790E1F003B2A9B /* MainVC.swift */,
+				3F3247731E790C0A003B2A9B /* OnBoardingVC.swift */,
 				3F08D4811E64AF7400065CCB /* Assets.xcassets */,
 				3F08D4831E64AF7400065CCB /* LaunchScreen.storyboard */,
 				3F08D4861E64AF7400065CCB /* Info.plist */,
@@ -286,6 +292,8 @@
 				3F08D47B1E64AF7300065CCB /* AppDelegate.swift in Sources */,
 				3FC821651E64B18B00E670A4 /* View3.swift in Sources */,
 				3FC8216A1E64B2C700E670A4 /* ViewController.swift in Sources */,
+				3F3247741E790C0A003B2A9B /* OnBoardingVC.swift in Sources */,
+				3F3247761E790E1F003B2A9B /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
