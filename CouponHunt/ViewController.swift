@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreImage
 
 class ViewController: UIViewController,
 UIImagePickerControllerDelegate,
@@ -16,7 +17,8 @@ UINavigationControllerDelegate
     
     
     
-    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var ScrollView: UIScrollView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +33,16 @@ UINavigationControllerDelegate
         
         // View1
         self.addChildViewController(V1)
-        self.scrollView.addSubview(V1.view)
+        self.ScrollView.addSubview(V1.view)
         V1.didMove(toParentViewController: self)
         
         //View2
         self.addChildViewController(V2)
-        self.scrollView.addSubview(V2.view)
+        self.ScrollView.addSubview(V2.view)
         V2.didMove(toParentViewController: self)
         //View3
         self.addChildViewController(V3)
-        self.scrollView.addSubview(V3.view)
+        self.ScrollView.addSubview(V3.view)
         V3.didMove(toParentViewController: self)
         
         var V2Frame : CGRect = V2.view.frame
@@ -51,7 +53,7 @@ UINavigationControllerDelegate
         V3Frame.origin.x = 2 * self.view.frame.width
         V3.view.frame = V3Frame
         
-        self.scrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: self.view.frame.size.height)
+        self.ScrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: self.view.frame.size.height)
         
         
         

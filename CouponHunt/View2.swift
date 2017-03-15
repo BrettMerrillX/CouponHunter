@@ -31,7 +31,7 @@ class View2: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    @IBAction func openPhotoLibraryButton(sender: AnyObject) {
+    @IBAction func openPhotoLibraryButton(_ sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -40,21 +40,24 @@ class View2: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        ImageLink.image = image
-        self.dismiss(animated: true, completion: nil);
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo image: [String : Any]) {
+        if let pickedImage = image[UIImagePickerControllerOriginalImage] as? UIImage {
+            ImageLink.contentMode = .scaleToFill
+            ImageLink.image = pickedImage
+        }
+        picker.dismiss(animated: true, completion: nil);
     }
 
-    @IBAction func SaveButton(sender: AnyObject) {
-        let imageData = UIImageJPEGRepresentation(ImageLink.image!, 0.6)
-        let compressedJPGImage = UIImage(data: imageData!)
-        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
+    @IBAction func SaveButton(_ sender: AnyObject) {
+        let imageData = UIImagePNGRepresentation(ImageLink.image!)
+        let compressedImage = UIImage(data: imageData!)
+        UIImageWriteToSavedPhotosAlbum(compressedImage!, nil, nil, nil)
         
-        let alert = UIAlertView(title: "Wow",
-                                message: "Your image has been saved to Photo Library!",
-                                delegate: nil,
-                                cancelButtonTitle: "Ok")
-        alert.show()
+        let alert = UIAlertController(title: "Saved", message: "Sweet zooms! Image saved to Photo Library!",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
     /*
